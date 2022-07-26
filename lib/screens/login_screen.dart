@@ -35,8 +35,7 @@ class _login_screenState extends State<login_screen> {
     super.dispose();
   }
 
-  void createnewacountclick() {
-  }
+  void createnewacountclick() {}
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,10 @@ class _login_screenState extends State<login_screen> {
       backgroundColor: const Color(0xFF0A0D14),
       appBar: AppBar(
         title: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/onbresd_screen');
+
+          },
           icon: const Icon(
             Icons.arrow_back_outlined,
           ),
@@ -94,7 +96,9 @@ class _login_screenState extends State<login_screen> {
                     ),
                     const Spacer(),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/regesteruser_screen');
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: Colors.transparent,
                         shape: RoundedRectangleBorder(
@@ -258,7 +262,9 @@ class _login_screenState extends State<login_screen> {
                       setState(() => {_remember = !_remember});
                     },
                     icon: Icon(
-                      _remember ? Icons.check_box_outline_blank : Icons.check_box,
+                      _remember
+                          ? Icons.check_box_outline_blank
+                          : Icons.check_box,
                       color: const Color(0xFF8D9092),
                     ),
                   ),
@@ -272,7 +278,9 @@ class _login_screenState extends State<login_screen> {
                   ),
                   const Spacer(),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/forget_screen');
+                    },
                     child: Text(
                       'forgot password?',
                       style: GoogleFonts.outfit(

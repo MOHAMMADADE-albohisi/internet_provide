@@ -35,7 +35,7 @@ class _onbresd_screenState extends State<onbresd_screen> {
   }
 
   void createnewacountclick() {
-    print('clice');
+    Navigator.pushReplacementNamed(context, '/regesteruser_screen');
   }
 
   @override
@@ -109,13 +109,17 @@ class _onbresd_screenState extends State<onbresd_screen> {
                         buttouns(
                             color: (0xFF3D5BF6),
                             onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/login_screen');
+
                             },
                             title: 'Sign Up with Goggle',
                             image: 'image_8'),
                         const SizedBox(height: 20),
                         buttouns(
                             color: (0xFF101010),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/login_screen');
+                            },
                             title: 'Sign Up with Apple',
                             image: 'image_7'),
                         const SizedBox(

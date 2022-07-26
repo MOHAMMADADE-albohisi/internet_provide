@@ -48,7 +48,10 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
       backgroundColor: const Color(0xFF0A0D14),
       appBar: AppBar(
         title: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/login_screen');
+
+          },
           icon: const Icon(
             Icons.arrow_back_outlined,
           ),
@@ -77,7 +80,9 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                 child: Row(
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/login_screen');
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: const Color(0xFF0A0D14),
                         shape: RoundedRectangleBorder(
@@ -336,7 +341,9 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                   ),
                   const Spacer(),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/forget_screen');
+                    },
                     child: Text(
                       'forgot password?',
                       style: GoogleFonts.outfit(
