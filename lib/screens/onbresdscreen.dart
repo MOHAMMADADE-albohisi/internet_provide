@@ -70,82 +70,84 @@ class _onbresd_screenState extends State<onbresd_screen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 34, vertical: 20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset('images/image_4.png'),
-                        const SizedBox(height: 118),
-                        Text(
-                          'Let’s Get Started',
-                          style: GoogleFonts.outfit(
-                            fontSize: 36,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(height: 24),
-                        Text(
-                          'Find the right data plan and what you want just in proquota',
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.outfit(
-                            fontSize: 16,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(height: 53),
-                        buttouns(
-                            color: (0xFF949CAD),
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(context, '/login_screen');
-                            },
-                            title: 'Sign Up With Email',
-                            image: 'image_6'),
-                        const SizedBox(height: 24),
-                        Text(
-                          'Or use instant sign up',
-                          style: GoogleFonts.outfit(
-                              fontSize: 16, color: const Color(0xFF97999B)),
-                        ),
-                        const SizedBox(height: 23),
-                        buttouns(
-                            color: (0xFF3D5BF6),
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(context, '/login_screen');
-
-                            },
-                            title: 'Sign Up with Goggle',
-                            image: 'image_8'),
-                        const SizedBox(height: 20),
-                        buttouns(
-                            color: (0xFF101010),
-                            onPressed: () {
-                              Navigator.pushReplacementNamed(context, '/login_screen');
-                            },
-                            title: 'Sign Up with Apple',
-                            image: 'image_7'),
-                        const SizedBox(
-                          height: 3,
-                        ),
-                        Center(
-                          child: RichText(
-                            text: TextSpan(
-                              text: 'Already Have an Account? ',
-                              style: GoogleFonts.nunito(
-                                color: const Color(0xFF97999B),
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: 'Sign In',
-                                  recognizer: _click,
-                                  style: GoogleFonts.outfit(
-                                    color: const Color(0xFF3D5BF6),
-                                    fontSize: 16,
-                                  ),
-                                )
-                              ],
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('images/image_4.png'),
+                          const SizedBox(height: 118),
+                          Text(
+                            'Let’s Get Started',
+                            style: GoogleFonts.outfit(
+                              fontSize: 36,
+                              color: Colors.white,
                             ),
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 24),
+                          Text(
+                            'Find the right data plan and what you want just in proquota',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.outfit(
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 53),
+                          buttouns(
+                              color: (0xFF949CAD),
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(
+                                    context, '/login_screen');
+                              },
+                              title: 'Sign Up With Email',
+                              image: 'image_6'),
+                          const SizedBox(height: 24),
+                          Text(
+                            'Or use instant sign up',
+                            style: GoogleFonts.outfit(
+                                fontSize: 16, color: const Color(0xFF97999B)),
+                          ),
+                          const SizedBox(height: 23),
+                          buttouns(
+                              color: (0xFF3D5BF6),
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(
+                                    context, '/login_screen');
+                              },
+                              title: 'Sign Up with Goggle',
+                              image: 'image_8'),
+                          const SizedBox(height: 20),
+                          buttouns(
+                              color: (0xFF101010),
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(
+                                    context, '/login_screen');
+                              },
+                              title: 'Sign Up with Apple',
+                              image: 'image_7'),
+                          const SizedBox(height: 3),
+                          Center(
+                            child: RichText(
+                              text: TextSpan(
+                                text: 'Already Have an Account? ',
+                                style: GoogleFonts.nunito(
+                                  color: const Color(0xFF97999B),
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'Sign In',
+                                    recognizer: _click,
+                                    style: GoogleFonts.outfit(
+                                      color: const Color(0xFF3D5BF6),
+                                      fontSize: 16,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -235,7 +237,8 @@ class _onbresd_screenState extends State<onbresd_screen> {
                   ),
                 ),
               ),
-            ),SizedBox(height: 37),
+            ),
+            SizedBox(height: 37),
           ],
         ),
       ),

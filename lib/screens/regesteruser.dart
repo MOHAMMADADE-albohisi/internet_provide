@@ -84,7 +84,8 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                         Navigator.pushReplacementNamed(context, '/login_screen');
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF0A0D14),
+                        primary: Colors.transparent,
+                        elevation: 0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
                         ),
@@ -105,7 +106,7 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.transparent,
+                        primary: Color(0xFF0A0D14),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
                         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internet_provide/screens/credit_screen.dart';
 import 'package:internet_provide/screens/forgetpassword.dart';
 import 'package:internet_provide/screens/home-screen.dart';
 import 'package:internet_provide/screens/login_screen.dart';
@@ -25,6 +26,7 @@ class interntapp extends StatelessWidget {
         '/regesteruser_screen': (context) => const regesteruser_screen(),
         '/forget_screen': (context) => const forgetpassword(),
         '/home_screen': (context) => const homescreen(),
+        '/credit_screen': (context) => const creditscreen(),
       },
     );
   }
