@@ -11,6 +11,7 @@ class detail_screen extends StatefulWidget {
 
 class _detail_screenState extends State<detail_screen> {
   late TapGestureRecognizer _click;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -26,8 +27,9 @@ class _detail_screenState extends State<detail_screen> {
     _click.dispose();
     super.dispose();
   }
-  void createnewacountclick() {
-  }
+
+  void createnewacountclick() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +95,9 @@ class _detail_screenState extends State<detail_screen> {
                   ),
                   Spacer(),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/paymen_screen');
+                      },
                       icon: Icon(
                         Icons.arrow_forward_ios,
                         color: Color(0xFFFFBB0D),
@@ -125,7 +129,6 @@ class _detail_screenState extends State<detail_screen> {
                             fontSize: 16,
                             color: Color(0xFFFFFFFF)),
                       ),
-
                     ],
                   ),
                   SizedBox(height: 16),
@@ -146,7 +149,6 @@ class _detail_screenState extends State<detail_screen> {
                             fontSize: 16,
                             color: Color(0xFFFFFFFF)),
                       ),
-
                     ],
                   ),
                 ],
@@ -158,7 +160,7 @@ class _detail_screenState extends State<detail_screen> {
             width: double.infinity,
             height: 61,
             color: Colors.grey,
-            child:  Padding(
+            child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Row(
                 children: [
@@ -177,7 +179,6 @@ class _detail_screenState extends State<detail_screen> {
                         fontSize: 16,
                         color: Color(0xFFFFFFFF)),
                   ),
-
                 ],
               ),
             ),
@@ -225,12 +226,10 @@ class _detail_screenState extends State<detail_screen> {
                               ),
                             ),
                           ),
-
                         ],
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -240,7 +239,9 @@ class _detail_screenState extends State<detail_screen> {
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: ElevatedButton(
               onPressed: () {
-                print('tes');
+                Navigator.pushReplacementNamed(context, '/paymen_screen');
+
+
               },
               style: ElevatedButton.styleFrom(
                 primary: const Color(0xFF3D5BF6),
@@ -261,10 +262,6 @@ class _detail_screenState extends State<detail_screen> {
               ),
             ),
           ),
-
-
-
-
         ],
       ),
     );

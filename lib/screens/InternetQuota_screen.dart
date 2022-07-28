@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +10,23 @@ class Internet_Quota extends StatefulWidget {
 }
 
 class _Internet_QuotaState extends State<Internet_Quota> {
+  late TapGestureRecognizer _click;
+
+
+  @override
+  void initState() {
+    super.initState();
+    _click = TapGestureRecognizer();
+    _click.onTap = createnewacountclick;
+  }
+
+  @override
+  void dispose() {
+    _click.dispose();
+    super.dispose();
+  }
+
+  void createnewacountclick() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -165,7 +183,7 @@ class _Internet_QuotaState extends State<Internet_Quota> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Container(
                     width: 327,
-                    height: 121,
+                    height: 130,
                     margin:
                         EdgeInsetsDirectional.only(bottom: index == 5 ? 0 : 24),
                     decoration: BoxDecoration(
@@ -180,14 +198,17 @@ class _Internet_QuotaState extends State<Internet_Quota> {
                           const SizedBox(height: 8),
                           Row(
                             children: [
-                              Text(
+                              TextButton(onPressed: (){
+                                Navigator.pushReplacementNamed(context, '/detail_screem');
+                              }, child: Text(
                                 'Happy With 10GB',
                                 style: GoogleFonts.outfit(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFFFFFFFF),
                                 ),
-                              ),
+                              )),
+
                               const Spacer(),
                               Image.asset('images/image_23.png')
                             ],
