@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_provide/screens/home-screen.dart';
+import 'package:internet_provide/widgets/BoxContaner.dart';
 
 class creditscreen extends StatefulWidget {
   const creditscreen({Key? key}) : super(key: key);
@@ -38,10 +39,12 @@ class _creditscreenState extends State<creditscreen> {
         children: [
           Container(
             width: double.infinity,
-            height: 137,
+            height: 207,
             color: Color(0xFF0A0D14),
             child: Column(
               children: [
+                SizedBox(height: 24),
+
                 Container(
                   width: 327,
                   height: 72,
@@ -100,7 +103,7 @@ class _creditscreenState extends State<creditscreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height:59),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Row(
@@ -109,7 +112,10 @@ class _creditscreenState extends State<creditscreen> {
                       Column(
                         children: [
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacementNamed(context, '/credit_screen');
+
+                            },
                             child: Text(
                               'Credits',
                               style: GoogleFonts.outfit(
@@ -133,7 +139,10 @@ class _creditscreenState extends State<creditscreen> {
                       Column(
                         children: [
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+
+                              Navigator.pushReplacementNamed(context, '/InternetQuota_screen');
+                            },
                             child: Text(
                               'Internet Quota',
                               style: GoogleFonts.outfit(
@@ -152,31 +161,50 @@ class _creditscreenState extends State<creditscreen> {
             ),
           ),
           SizedBox(height: 32),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: GridView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-
-              itemCount: 8,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 24,
-                crossAxisSpacing: 24,
-              ),
-              itemBuilder: (context, index) {
-                return Card(
-                  color: Color(0xFF111622),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      BoxContaner(number: '5.000', price: '4.500'),
+                      Spacer(),
+                      BoxContaner(number: '10.000', price: '9.500'),
+                    ],
                   ),
-                );
-              },
+                  SizedBox(height: 24),
+                  Row(
+                    children: [
+                      BoxContaner(number: '15.000', price: '14.500'),
+                      Spacer(),
+                      BoxContaner(number:' 20.000', price: '19.500'),
+                    ],
+                  ),
+                  SizedBox(height: 24),
+                  Row(
+                    children: [
+                      BoxContaner(number: '25.000', price: '24.500'),
+                      Spacer(),
+                      BoxContaner(number: '50.000', price: '49.500'),
+                    ],
+                  ),
+                  SizedBox(height: 24),
+                  Row(
+                    children: [
+                      BoxContaner(number: '75.000', price: '74.500'),
+                      Spacer(),
+                      BoxContaner(number: '100.000', price: '99.500'),
+                    ],
+                  ),
+                ],
+              )
             ),
           ),
+
         ],
       ),
     );
   }
 }
+

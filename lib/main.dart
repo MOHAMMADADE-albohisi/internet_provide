@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:internet_provide/screens/Detail.dart';
+import 'package:internet_provide/screens/InternetQuota_screen.dart';
 import 'package:internet_provide/screens/credit_screen.dart';
 import 'package:internet_provide/screens/forgetpassword.dart';
 import 'package:internet_provide/screens/home-screen.dart';
 import 'package:internet_provide/screens/login_screen.dart';
 import 'package:internet_provide/screens/lunchscreen.dart';
 import 'package:internet_provide/screens/onbresdscreen.dart';
+import 'package:internet_provide/screens/payment_screen.dart';
 import 'package:internet_provide/screens/regesteruser.dart';
 
 void main() {
@@ -27,6 +30,9 @@ class interntapp extends StatelessWidget {
         '/forget_screen': (context) => const forgetpassword(),
         '/home_screen': (context) => const homescreen(),
         '/credit_screen': (context) => const creditscreen(),
+        '/InternetQuota_screen': (context) => const Internet_Quota(),
+        '/detail_screem': (context) => const detail_screen(),
+        '/paymen_screen': (context) => const paymen_screen(),
       },
     );
   }
