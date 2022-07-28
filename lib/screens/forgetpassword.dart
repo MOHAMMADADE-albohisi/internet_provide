@@ -167,7 +167,7 @@ class _forgetpasswordState extends State<forgetpassword> {
   }
 
   void login() {
-    Navigator.pushReplacementNamed(context, '/home_screen');
+    Navigator.pushReplacementNamed(context, '/login_screen');
   }
 
 }

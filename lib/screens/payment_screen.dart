@@ -65,6 +65,13 @@ class _paymen_screenState extends State<paymen_screen> {
               height: 58,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
+                  boxShadow:const [
+                    BoxShadow(
+                      offset: Offset(0, 0),
+                      color: Color(0xFF3D5BF6),
+                      blurRadius: 4,
+                    )
+                  ],
                 color: Color(0xFF28364E),
               ),
               child: Padding(
@@ -129,6 +136,82 @@ class _paymen_screenState extends State<paymen_screen> {
                 fontWeight: FontWeight.w500,
                 fontSize: 14,
                 color: Color(0xFFFFFFFF),),
+            ),
+            SizedBox(height: 24),
+            Container(
+              width: double.infinity,
+              height: 58,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Color(0xFF28364E),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    Image.asset('images/image_29.png'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text('BCA',
+                        style: GoogleFonts.outfit(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          color: Color(0xFFFFFFFF),),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
+            Container(
+              width: double.infinity,
+              height: 58,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Color(0xFF28364E),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  children: [
+                    Image.asset('images/image_30.png'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text('BNI',
+                        style: GoogleFonts.outfit(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          color: Color(0xFFFFFFFF),),),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 118),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: ElevatedButton(
+                onPressed: () {
+                  print('tes');
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFF3D5BF6),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  minimumSize: const Size(
+                    327,
+                    56,
+                  ),
+                ),
+                child: Text(
+                  'Pay Now',
+                  style: GoogleFonts.outfit(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
             ),
           ],
         ),

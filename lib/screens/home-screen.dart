@@ -62,7 +62,9 @@ class _homescreenState extends State<homescreen> {
             flex: 22,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/setting_screen');
+            },
             icon: const Icon(Icons.notifications_outlined),
           ),
           const Spacer(
@@ -74,7 +76,7 @@ class _homescreenState extends State<homescreen> {
         children: [
           Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                 width: 371,
                 height: 220,
@@ -143,10 +145,10 @@ class _homescreenState extends State<homescreen> {
                               style: GoogleFonts.outfit(
                                 fontSize: 24,
                                 fontWeight: FontWeight.w500,
-                                color: Color(0xFFFFFFFF),
+                                color: const Color(0xFFFFFFFF),
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
@@ -164,7 +166,7 @@ class _homescreenState extends State<homescreen> {
                                 style: GoogleFonts.outfit(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
-                                  color: Color(0xFF161B1D),
+                                  color: const Color(0xFF161B1D),
                                 ),
                               ),
                             ),
@@ -178,19 +180,19 @@ class _homescreenState extends State<homescreen> {
                       style: GoogleFonts.outfit(
                           fontWeight: FontWeight.w400,
                           fontSize: 12,
-                          color: Color(0xFFFFFFFF)),
+                          color: const Color(0xFFFFFFFF)),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          SizedBox(height: 16),
-          seeallwidget(title: 'Active Package'),
+          const SizedBox(height: 16),
+          const seeallwidget(title: 'Active Package'),
           ConstrainedBox(
-            constraints: BoxConstraints(maxHeight: 290),
+            constraints: const BoxConstraints(maxHeight: 290),
             child: ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 79),
+              constraints: const BoxConstraints(maxHeight: 79),
               child: PageView.builder(
                   controller: _mohammad,
                   itemCount: 3,
@@ -201,8 +203,8 @@ class _homescreenState extends State<homescreen> {
                       margin:
                           EdgeInsetsDirectional.only(end: index != 2 ? 10 : 0),
                       color: index % 2 == 0
-                          ? Color(0xFF28364E)
-                          : Color(0xFF28364E),
+                          ? const Color(0xFF28364E)
+                          : const Color(0xFF28364E),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Row(
@@ -246,9 +248,9 @@ class _homescreenState extends State<homescreen> {
                   }),
             ),
           ),
-          SizedBox(height: 32),
-          seeallwidget(title: 'Features'),
-          SizedBox(height: 24),
+          const SizedBox(height: 32),
+          const seeallwidget(title: 'Features'),
+          const SizedBox(height: 24),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 27.5),
             child: Column(
@@ -312,15 +314,15 @@ class _homescreenState extends State<homescreen> {
               ],
             ),
           ),
-          SizedBox(height: 21),
+          const SizedBox(height: 21),
           BottomNavigationBar(
-            backgroundColor: Color(0xFF0A0D14),
+            backgroundColor: const Color(0xFF0A0D14),
             onTap: (int selectedPageIndex) {
               setState(() => _selectedPageIndex = selectedPageIndex);
             },
             currentIndex: _selectedPageIndex,
             type: BottomNavigationBarType.fixed,
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 activeIcon: Icon(Icons.home),
                 icon: Icon(

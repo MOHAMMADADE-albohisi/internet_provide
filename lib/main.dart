@@ -9,6 +9,7 @@ import 'package:internet_provide/screens/lunchscreen.dart';
 import 'package:internet_provide/screens/onbresdscreen.dart';
 import 'package:internet_provide/screens/payment_screen.dart';
 import 'package:internet_provide/screens/regesteruser.dart';
+import 'package:internet_provide/screens/setting_screen.dart';
 
 void main() {
   runApp(interntapp());
@@ -33,6 +34,7 @@ class interntapp extends StatelessWidget {
         '/InternetQuota_screen': (context) => const Internet_Quota(),
         '/detail_screem': (context) => const detail_screen(),
         '/paymen_screen': (context) => const paymen_screen(),
+        '/setting_screen': (context) => const setting_screen(),
       },
     );
   }

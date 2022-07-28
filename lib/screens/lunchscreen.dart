@@ -13,8 +13,7 @@ class _lunchscreenState extends State<lunchscreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      // Navigator.pushReplacementNamed(context, '/credit_screen');
-      Navigator.pushReplacementNamed(context, '/paymen_screen');
+      Navigator.pushReplacementNamed(context, '/onbresd_screen');
     });
   }
   @override
