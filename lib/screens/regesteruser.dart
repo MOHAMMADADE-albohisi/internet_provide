@@ -39,8 +39,7 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
     super.dispose();
   }
 
-  void createnewacountclick() {
-  }
+  void createnewacountclick() {}
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +49,6 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
         title: IconButton(
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/login_screen');
-
           },
           icon: const Icon(
             Icons.arrow_back_outlined,
@@ -81,7 +79,8 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, '/login_screen');
+                        Navigator.pushReplacementNamed(
+                            context, '/login_screen');
                       },
                       style: ElevatedButton.styleFrom(
                         primary: Colors.transparent,
@@ -196,7 +195,7 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                 maxLines: null,
                 expands: true,
               ),
-              SizedBox(height:24),
+              SizedBox(height: 24),
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 controller: _email,
@@ -328,7 +327,9 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
                       setState(() => {_remember = !_remember});
                     },
                     icon: Icon(
-                      _remember ? Icons.check_box_outline_blank : Icons.check_box,
+                      _remember
+                          ? Icons.check_box_outline_blank
+                          : Icons.check_box,
                       color: const Color(0xFF8D9092),
                     ),
                   ),
@@ -405,7 +406,9 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
   }
 
   bool checkData() {
-    if (_email.text.isNotEmpty && _password.text.isNotEmpty &&_regester.text.isNotEmpty) {
+    if (_email.text.isNotEmpty &&
+        _password.text.isNotEmpty &&
+        _regester.text.isNotEmpty) {
       _controolervalue();
       return true;
     }
@@ -415,13 +418,16 @@ class _regesteruser_screenState extends State<regesteruser_screen> {
   }
 
   void _controolervalue() {
-    setState(() {
-      _emailerror = _email.text.isEmpty ? 'Enter Email adress' : null;
-      _passworderror = _password.text.isEmpty ? 'Enater password' : null;
-      _regestererror = _regester.text.isEmpty ? 'Enater Full Name' : null;
-    });
+    setState(
+      () {
+        _emailerror = _email.text.isEmpty ? 'Enter Email adress' : null;
+        _passworderror = _password.text.isEmpty ? 'Enater password' : null;
+        _regestererror = _regester.text.isEmpty ? 'Enater Full Name' : null;
+      },
+    );
   }
 
   void login() {
+    Navigator.pushReplacementNamed(context, '/verify_screen');
   }
 }

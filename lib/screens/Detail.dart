@@ -240,8 +240,6 @@ class _detail_screenState extends State<detail_screen> {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacementNamed(context, '/paymen_screen');
-
-
               },
               style: ElevatedButton.styleFrom(
                 primary: const Color(0xFF3D5BF6),

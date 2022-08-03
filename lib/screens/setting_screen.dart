@@ -36,7 +36,7 @@ class _setting_screenState extends State<setting_screen> {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
+          child: ListView(
             children: [
               const SizedBox(height: 40.5),
               Container(
@@ -141,7 +141,7 @@ class _setting_screenState extends State<setting_screen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 125),
+              const SizedBox(height: 90),
               TextButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, '/login_screen');

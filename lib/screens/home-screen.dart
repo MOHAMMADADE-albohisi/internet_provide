@@ -18,7 +18,7 @@ class _homescreenState extends State<homescreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _mohammad = PageController(viewportFraction: 0.7, initialPage: 0);
+    _mohammad = PageController(viewportFraction: 0.7, initialPage: 1);
   }
 
   @override
@@ -73,6 +73,7 @@ class _homescreenState extends State<homescreen> {
         ],
       ),
       body: ListView(
+        
         children: [
           Column(
             children: [
@@ -312,14 +313,25 @@ class _homescreenState extends State<homescreen> {
                   ],
                 ),
               ],
+
             ),
           ),
-          const SizedBox(height: 21),
           BottomNavigationBar(
             backgroundColor: const Color(0xFF0A0D14),
             onTap: (int selectedPageIndex) {
               setState(() => _selectedPageIndex = selectedPageIndex);
             },
+            selectedItemColor: Colors.blue,
+            selectedIconTheme: const IconThemeData(
+              color: Colors.blue,
+            ),
+
+            unselectedItemColor: Color(0xFFFFFFFF),
+            unselectedIconTheme: const IconThemeData(
+              color: Color(0xFFFFFFFF),
+              //للتحكم بحجم العانصر الغير محددة
+              // size: 10,
+            ),
             currentIndex: _selectedPageIndex,
             type: BottomNavigationBarType.fixed,
             items: const [

@@ -121,6 +121,7 @@ class _creditscreenState extends State<creditscreen> {
                               ),
                             ),
                           ),
+
                           Container(
                             margin: const EdgeInsetsDirectional.only(end: 10),
                             height: 4,
@@ -157,43 +158,24 @@ class _creditscreenState extends State<creditscreen> {
             ),
           ),
           const SizedBox(height: 32),
-          Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Column(
-                children: [
-                  Row(
-                    children: const [
-                      BoxContaner(number: '5.000', price: '4.500'),
-                      Spacer(),
-                      BoxContaner(number: '10.000', price: '9.500'),
-                    ],
-                  ),
-                  const SizedBox(height: 24),
-                  Row(
-                    children: const [
-                      BoxContaner(number: '15.000', price: '14.500'),
-                      Spacer(),
-                      BoxContaner(number: ' 20.000', price: '19.500'),
-                    ],
-                  ),
-                  const SizedBox(height: 24),
-                  Row(
-                    children: const [
-                      BoxContaner(number: '25.000', price: '24.500'),
-                      Spacer(),
-                      BoxContaner(number: '50.000', price: '49.500'),
-                    ],
-                  ),
-                  const SizedBox(height: 24),
-                  Row(
-                    children: const [
-                      BoxContaner(number: '75.000', price: '74.500'),
-                      Spacer(),
-                      BoxContaner(number: '100.000', price: '99.500'),
-                    ],
-                  ),
-                ],
-              )),
+          GridView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
+            itemCount:8,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 2,
+              mainAxisSpacing:24,
+              crossAxisSpacing:19,
+            ),
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: BoxContaner(number: '5.000', price: '4.500'),
+              );
+            },
+          ),
         ],
       ),
     );
