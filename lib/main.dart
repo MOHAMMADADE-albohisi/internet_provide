@@ -12,6 +12,7 @@ import 'package:internet_provide/screens/onbresdscreen.dart';
 import 'package:internet_provide/screens/payment_screen.dart';
 import 'package:internet_provide/screens/regesteruser.dart';
 import 'package:internet_provide/screens/setting_screen.dart';
+import 'package:internet_provide/screens/tessttabbar_screen.dart';
 
 void main() {
   runApp(interntapp());
@@ -39,6 +40,7 @@ class interntapp extends StatelessWidget {
         '/setting_screen': (context) => const setting_screen(),
         '/newpasswrd_screen': (context) => const newpassword(),
         '/verify_screen': (context) => const Verify_screen(),
+        '/testtabbar_screen': (context) => const testtabbar(),
       },
     );
   }

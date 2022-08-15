@@ -10,6 +10,7 @@ class creditscreen extends StatefulWidget {
 }
 
 class _creditscreenState extends State<creditscreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,7 +122,6 @@ class _creditscreenState extends State<creditscreen> {
                               ),
                             ),
                           ),
-
                           Container(
                             margin: const EdgeInsetsDirectional.only(end: 10),
                             height: 4,

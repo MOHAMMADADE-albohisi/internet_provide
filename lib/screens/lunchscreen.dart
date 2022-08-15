@@ -14,6 +14,7 @@ class _lunchscreenState extends State<lunchscreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, '/onbresd_screen');
+      // Navigator.pushNamed(context, '/testtabbar_screen');
     });
   }
   @override

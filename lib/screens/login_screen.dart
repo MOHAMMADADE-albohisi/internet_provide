@@ -45,7 +45,6 @@ class _login_screenState extends State<login_screen> {
         title: IconButton(
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/onbresd_screen');
-
           },
           icon: const Icon(
             Icons.arrow_back_outlined,

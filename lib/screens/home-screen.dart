@@ -271,8 +271,14 @@ class _homescreenState extends State<homescreen> {
                         name: 'Credit',
                         image: 'image_15'),
                     cardwidget(
-                        onPressed2: () {},
-                        onPressed1: () {},
+                        onPressed2: () {
+                          Navigator.pushReplacementNamed(
+                              context, '/testtabbar_screen');
+                        },
+                        onPressed1: () {
+                          Navigator.pushReplacementNamed(
+                              context, '/testtabbar_screen');
+                        },
                         name: 'Buy Internet',
                         image: 'image_16'),
                     cardwidget(
